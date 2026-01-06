@@ -1,0 +1,60 @@
+/* ================================
+   THEME 3: Creative Minimal
+   Distinctive geometric sans
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors - Warm blacks + terracotta */
+    --bg-color: #fdfcfa;
+    --bg-alt: #f8f6f2;
+    --text-color: #1f1d1a;
+    --text-secondary: #48443d;
+    --text-tertiary: #6e695e;
+    --border-color: #dad6cd;
+    --accent-color: #c1664a;
+    --btn-text: #ffffff;
+
+    /* Typography */
+    --font-primary: 'Space Grotesk', -apple-system, sans-serif;
+    --heading-weight: 600;
+    --heading-spacing: -0.015em;
+
+    /* Effects */
+    --shadow-hover: 0 4px 14px rgba(193, 102, 74, 0.15);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--heading-weight);
+}
+
+.site-name {
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+}
+
+.hero-intro {
+    font-weight: 600;
+}
+
+/* Subtle border accent */
+.experience-item {
+    border-left: 3px solid transparent;
+}
+
+.experience-item:hover {
+    border-left-color: var(--accent-color);
+}

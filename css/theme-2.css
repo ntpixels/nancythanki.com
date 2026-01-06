@@ -1,0 +1,59 @@
+/* ================================
+   THEME 2: Elegant Professional
+   Refined serif headings + clean sans body
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+    /* Colors - Warm charcoal + deep teal */
+    --bg-color: #fcfcfb;
+    --bg-alt: #f7f6f4;
+    --text-color: #2d2925;
+    --text-secondary: #4d463f;
+    --text-tertiary: #6d655c;
+    --border-color: #e6e3dd;
+    --accent-color: #1e6b5f;
+    --btn-text: #ffffff;
+
+    /* Typography */
+    --font-primary: 'Playfair Display', Georgia, serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --heading-weight: 600;
+    --heading-spacing: -0.01em;
+
+    /* Effects */
+    --shadow-hover: 0 3px 10px rgba(30, 107, 95, 0.12);
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6,
+.site-name,
+.hero-intro,
+.section-title,
+.exp-title,
+.resume-role,
+.page-title {
+    font-family: var(--font-primary);
+    font-weight: var(--heading-weight);
+}
+
+.site-name {
+    font-size: 1.35rem;
+    letter-spacing: 0;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    letter-spacing: 0.02em;
+}
+
+.hero-intro {
+    font-weight: 600;
+    line-height: 1.25;
+}

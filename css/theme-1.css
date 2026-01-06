@@ -1,0 +1,55 @@
+/* ================================
+   THEME 1: Bold & Modern
+   Strong sans-serif, confident colors
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Colors - Deep navy + vibrant coral */
+    --bg-color: #fafafa;
+    --bg-alt: #f4f4f4;
+    --text-color: #1a2332;
+    --text-secondary: #3a4556;
+    --text-tertiary: #6b7280;
+    --border-color: #e2e4e8;
+    --accent-color: #ff6b4a;
+    --btn-text: #ffffff;
+
+    /* Typography */
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --heading-weight: 700;
+    --heading-spacing: -0.02em;
+
+    /* Effects */
+    --shadow-hover: 0 4px 12px rgba(255, 107, 74, 0.15);
+}
+
+body {
+    font-family: var(--font-primary);
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--heading-weight);
+}
+
+.site-name {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+}
+
+.hero-intro {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+}
