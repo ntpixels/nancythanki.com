@@ -1,0 +1,25 @@
+/* ================================
+   Theme: Sans-Serif + Rust Accent
+   ================================ */
+
+:root {
+    /* Color Palette */
+    --bg-color: #fdfdf9;
+    --text-color: #2a2824;
+    --text-secondary: #4a4641;
+    --text-tertiary: #6a655e;
+    --border-color: #e8e6e1;
+    --accent-color: #b94e34;
+
+    /* Typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-secondary: var(--font-primary);
+}
+
+body {
+    font-family: var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+}

@@ -1,0 +1,40 @@
+/* ================================
+   Theme: Serif + Rust Accent
+   ================================ */
+
+:root {
+    /* Color Palette */
+    --bg-color: #fdfdf9;
+    --text-color: #2a2824;
+    --text-secondary: #4a4641;
+    --text-tertiary: #6a655e;
+    --border-color: #e8e6e1;
+    --accent-color: #b94e34;
+
+    /* Typography */
+    --font-primary: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+    --font-secondary: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body {
+    font-family: var(--font-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+}
+
+/* Serif-specific adjustments */
+.hero-title {
+    font-weight: 500;
+}
+
+.section-title,
+.role-title,
+.category-title {
+    font-weight: 500;
+}
+
+.nav-link {
+    font-weight: 400;
+}
