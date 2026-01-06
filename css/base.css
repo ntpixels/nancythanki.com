@@ -122,48 +122,6 @@ body {
     flex-wrap: wrap;
 }
 
-/* Button Style Picker */
-.button-style-picker {
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}
-
-.picker-label {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.style-btn {
-    padding: 0.4rem 0.75rem;
-    font-family: inherit;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border: 1px solid var(--border-color);
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    border-radius: 3px;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.style-btn:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
-}
-
-.style-btn.active {
-    background-color: var(--accent-color);
-    color: var(--btn-text);
-    border-color: var(--accent-color);
-}
-
 /* Default CTA styles (hidden base) */
 .cta-link {
     font-size: 1rem;
@@ -661,10 +619,10 @@ body {
 }
 
 /* ================================
-   Theme Switcher
+   Design Controls
    ================================ */
 
-.theme-switcher {
+.design-controls {
     position: fixed;
     bottom: 1.5rem;
     right: 1.5rem;
@@ -672,23 +630,30 @@ body {
     border: 1px solid var(--border-color);
     padding: 0.75rem;
     border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 200;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.control-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    z-index: 200;
 }
 
-.switcher-label {
-    font-size: 0.75rem;
+.control-label {
+    font-size: 0.7rem;
     font-weight: 600;
     color: var(--text-tertiary);
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    min-width: 50px;
 }
 
-.theme-btn {
-    padding: 0.4rem 0.75rem;
+.control-btn {
+    padding: 0.35rem 0.65rem;
     font-family: inherit;
     font-size: 0.7rem;
     font-weight: 600;
@@ -701,15 +666,118 @@ body {
     white-space: nowrap;
 }
 
-.theme-btn:hover {
+.control-btn:hover {
     border-color: var(--accent-color);
     color: var(--accent-color);
 }
 
-.theme-btn.active {
+.control-btn.active {
     background-color: var(--accent-color);
     color: var(--btn-text);
     border-color: var(--accent-color);
+}
+
+/* ================================
+   Layout Variations
+   ================================ */
+
+/* Layout: Break the Grid (Asymmetric) */
+.layout-grid .hero {
+    padding: 6rem 1.5rem 5rem;
+}
+
+.layout-grid .hero-content {
+    max-width: 700px;
+    margin-left: 5%;
+}
+
+.layout-grid .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.layout-grid .section {
+    padding: 4rem 1.5rem;
+}
+
+.layout-grid .about-content {
+    max-width: 600px;
+    margin-left: 10%;
+}
+
+.layout-grid .skills-grid {
+    gap: 2.5rem;
+}
+
+/* Layout: Visual Warmth (Color blocks & backgrounds) */
+.layout-warmth {
+    background: linear-gradient(to bottom, var(--bg-color) 0%, var(--bg-alt) 50%, var(--bg-color) 100%);
+}
+
+.layout-warmth .hero {
+    background-color: var(--bg-alt);
+    padding: 6rem 1.5rem 5rem;
+}
+
+.layout-warmth .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+}
+
+.layout-warmth .section:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.layout-warmth .skills-grid .skill-item {
+    background-color: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border-left-width: 3px;
+}
+
+/* Layout: Maximum Space (Ultra minimal) */
+.layout-space .hero {
+    padding: 10rem 1.5rem 8rem;
+}
+
+.layout-space .hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.layout-space .hero-label {
+    margin-bottom: 2rem;
+}
+
+.layout-space .hero-title {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+}
+
+.layout-space .hero-description {
+    font-size: 1.15rem;
+    margin-bottom: 3rem;
+}
+
+.layout-space .hero-actions {
+    justify-content: center;
+}
+
+.layout-space .section {
+    padding: 6rem 1.5rem;
+}
+
+.layout-space .about-content,
+.layout-space .skills-grid {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.layout-space .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 /* ================================
@@ -733,13 +801,37 @@ body {
         font-size: 0.9rem;
     }
 
-    .hero-actions.style-pill .cta-link {
-        padding: 0.65rem 1.25rem;
+    .design-controls {
+        bottom: 1rem;
+        right: 1rem;
+        padding: 0.5rem;
     }
 
-    .button-style-picker {
-        flex-wrap: wrap;
-        margin-top: 1.5rem;
+    .control-btn {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.65rem;
+    }
+
+    .control-label {
+        font-size: 0.65rem;
+        min-width: 45px;
+    }
+
+    .layout-grid .hero-title,
+    .layout-warmth .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .layout-space .hero-title {
+        font-size: 3rem;
+    }
+
+    .layout-grid .hero-content {
+        margin-left: 0;
+    }
+
+    .layout-grid .about-content {
+        margin-left: 0;
     }
 
     .section {

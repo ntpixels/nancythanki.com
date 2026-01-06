@@ -20,9 +20,9 @@
         </div>
     </header>
 
-    <main>
+    <main class="layout-grid" id="mainLayout">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" id="heroSection">
             <div class="hero-content">
                 <p class="hero-label">Operations Leader</p>
                 <h2 class="hero-title">I turn complexity into clarity.</h2>
@@ -34,12 +34,6 @@
                 <div class="hero-actions" id="heroActions">
                     <a href="resume.html" class="cta-link cta-primary">View Resume</a>
                     <a href="contact.html" class="cta-link cta-secondary">Get in Touch</a>
-                </div>
-                <div class="button-style-picker">
-                    <label class="picker-label">Button Style:</label>
-                    <button onclick="setButtonStyle('underline')" class="style-btn active" data-style="underline">Underline</button>
-                    <button onclick="setButtonStyle('pill')" class="style-btn" data-style="pill">Pill</button>
-                    <button onclick="setButtonStyle('arrow')" class="style-btn" data-style="arrow">Arrow</button>
                 </div>
             </div>
         </section>
@@ -112,19 +106,45 @@
         </div>
     </footer>
 
-    <!-- Theme Switcher -->
-    <div class="theme-switcher">
-        <div class="switcher-label">Theme:</div>
-        <button onclick="switchTheme(2)" class="theme-btn active" data-theme="2">Elegant</button>
-        <button onclick="switchTheme(3)" class="theme-btn" data-theme="3">Creative</button>
+    <!-- Design Controls -->
+    <div class="design-controls">
+        <div class="control-group">
+            <div class="control-label">Layout:</div>
+            <button onclick="setLayout('grid')" class="control-btn active" data-layout="grid">Grid</button>
+            <button onclick="setLayout('warmth')" class="control-btn" data-layout="warmth">Warmth</button>
+            <button onclick="setLayout('space')" class="control-btn" data-layout="space">Space</button>
+        </div>
+        <div class="control-group">
+            <div class="control-label">Button:</div>
+            <button onclick="setButtonStyle('underline')" class="control-btn active" data-style="underline">Underline</button>
+            <button onclick="setButtonStyle('arrow')" class="control-btn" data-style="arrow">Arrow</button>
+        </div>
+        <div class="control-group">
+            <div class="control-label">Theme:</div>
+            <button onclick="switchTheme(2)" class="control-btn active" data-theme="2">Elegant</button>
+            <button onclick="switchTheme(3)" class="control-btn" data-theme="3">Creative</button>
+        </div>
     </div>
 
     <script>
+        function setLayout(layout) {
+            const main = document.getElementById('mainLayout');
+            main.className = 'layout-' + layout;
+
+            // Update active button
+            document.querySelectorAll('[data-layout]').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.layout === layout) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
         function switchTheme(num) {
             document.getElementById('theme-stylesheet').href = `css/theme-${num}.css`;
 
             // Update active button
-            document.querySelectorAll('.theme-btn').forEach(btn => {
+            document.querySelectorAll('[data-theme]').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.dataset.theme == num) {
                     btn.classList.add('active');
@@ -136,8 +156,8 @@
             const heroActions = document.getElementById('heroActions');
             heroActions.className = 'hero-actions style-' + style;
 
-            // Update active style button
-            document.querySelectorAll('.style-btn').forEach(btn => {
+            // Update active button
+            document.querySelectorAll('[data-style]').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.dataset.style === style) {
                     btn.classList.add('active');
