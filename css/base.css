@@ -122,37 +122,123 @@ body {
     flex-wrap: wrap;
 }
 
-.cta-primary,
-.cta-secondary {
-    padding: 0.875rem 1.75rem;
-    font-size: 0.95rem;
+/* Button Style Picker */
+.button-style-picker {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.picker-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.style-btn {
+    padding: 0.4rem 0.75rem;
+    font-family: inherit;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.style-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.style-btn.active {
+    background-color: var(--accent-color);
+    color: var(--btn-text);
+    border-color: var(--accent-color);
+}
+
+/* Default CTA styles (hidden base) */
+.cta-link {
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.2s ease;
+    transition: all 0.25s ease;
     display: inline-block;
 }
 
-.cta-primary {
-    background-color: var(--accent-color);
-    color: var(--btn-text);
-    border: 2px solid var(--accent-color);
+/* Style 1: Underline Links */
+.hero-actions.style-underline .cta-link {
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 0.25rem;
 }
 
-.cta-primary:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-}
-
-.cta-secondary {
-    background-color: transparent;
+.hero-actions.style-underline .cta-primary {
     color: var(--accent-color);
-    border: 2px solid var(--accent-color);
 }
 
-.cta-secondary:hover {
+.hero-actions.style-underline .cta-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.hero-actions.style-underline .cta-link:hover::after {
+    width: 100%;
+}
+
+/* Style 2: Pill Buttons */
+.hero-actions.style-pill .cta-link {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background-color: var(--bg-alt);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.hero-actions.style-pill .cta-primary {
     background-color: var(--accent-color);
     color: var(--btn-text);
+    border-color: var(--accent-color);
+}
+
+.hero-actions.style-pill .cta-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style 3: Arrow Links */
+.hero-actions.style-arrow .cta-link {
+    color: var(--text-color);
+    position: relative;
+    padding-right: 1.5rem;
+}
+
+.hero-actions.style-arrow .cta-primary {
+    color: var(--accent-color);
+}
+
+.hero-actions.style-arrow .cta-link::after {
+    content: '\2192';
+    position: absolute;
+    right: 0;
+    transition: transform 0.2s ease;
+}
+
+.hero-actions.style-arrow .cta-link:hover::after {
+    transform: translateX(4px);
 }
 
 /* ================================
@@ -265,46 +351,31 @@ body {
 }
 
 /* ================================
-   Skills - VISUAL CARDS
+   Skills - CLEAN GRID
    ================================ */
 
-.skills-visual {
+.skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
-.skill-card {
-    padding: 2rem 1.5rem;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    text-align: center;
-    transition: all 0.3s ease;
+.skill-item {
+    padding-left: 1rem;
+    border-left: 2px solid var(--accent-color);
 }
 
-.skill-card:hover {
-    border-color: var(--accent-color);
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-3px);
-}
-
-.skill-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    opacity: 0.9;
-}
-
-.skill-title {
-    font-size: 1.1rem;
+.skill-category {
+    font-size: 1.05rem;
     font-weight: 600;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: var(--text-color);
 }
 
-.skill-desc {
+.skill-list {
     font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 /* ================================
@@ -387,7 +458,25 @@ body {
     margin: 0 auto;
 }
 
-.footer-links {
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+    color: var(--accent-color);
+}
+
+.footer-social {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
@@ -397,7 +486,6 @@ body {
 .footer-link {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 0.875rem;
     transition: color 0.2s ease;
     display: inline-flex;
     align-items: center;
@@ -409,10 +497,6 @@ body {
 
 .footer-link:hover {
     color: var(--accent-color);
-}
-
-.footer-text-link {
-    font-size: 0.875rem;
 }
 
 .footer-text {
@@ -645,10 +729,17 @@ body {
         font-size: 1rem;
     }
 
-    .cta-primary,
-    .cta-secondary {
+    .cta-link {
         font-size: 0.9rem;
-        padding: 0.75rem 1.5rem;
+    }
+
+    .hero-actions.style-pill .cta-link {
+        padding: 0.65rem 1.25rem;
+    }
+
+    .button-style-picker {
+        flex-wrap: wrap;
+        margin-top: 1.5rem;
     }
 
     .section {
@@ -667,8 +758,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .skills-visual {
+    .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .resume-item-header {
