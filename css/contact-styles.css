@@ -5,7 +5,8 @@
 /* Hide all by default */
 .contact-minimal,
 .contact-split,
-.contact-info-only {
+.contact-info-only,
+.contact-split-minimal {
     display: none;
 }
 
@@ -20,6 +21,10 @@
 
 .contact-style-info .contact-info-only {
     display: block;
+}
+
+.contact-style-split-minimal .contact-split-minimal {
+    display: grid;
 }
 
 /* ================================
@@ -220,6 +225,23 @@
 }
 
 /* ================================
+   Style 4: Split + Minimal Hybrid
+   ================================ */
+
+.contact-split-minimal {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 900px;
+    margin: 6rem auto;
+}
+
+.form-split-minimal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ================================
    Contact Style Switcher
    ================================ */
 
@@ -241,6 +263,12 @@
 /* Responsive */
 @media (max-width: 768px) {
     .contact-split {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin: 4rem auto;
+    }
+
+    .contact-split-minimal {
         grid-template-columns: 1fr;
         gap: 3rem;
         margin: 4rem auto;

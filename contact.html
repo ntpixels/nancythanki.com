@@ -21,7 +21,7 @@
         </div>
     </header>
 
-    <main class="contact-page contact-style-minimal" id="contactMain">
+    <main class="contact-page contact-style-split-minimal" id="contactMain">
         <div class="container">
             <!-- Minimal Inline Style -->
             <div class="contact-minimal">
@@ -101,13 +101,44 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Split + Minimal Hybrid Style -->
+            <div class="contact-split-minimal">
+                <div class="split-info">
+                    <h1 class="contact-heading">Get in Touch</h1>
+                    <p class="contact-description">
+                        Interested in collaborating or have a challenge you're working through?
+                        I'd love to hear from you.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:your-email@example.com" class="contact-method">
+                            <span class="method-label">Email</span>
+                            <span class="method-value">your-email@example.com</span>
+                        </a>
+                        <a href="https://linkedin.com/in/nancythanki" target="_blank" class="contact-method">
+                            <span class="method-label">LinkedIn</span>
+                            <span class="method-value">Connect with me</span>
+                        </a>
+                    </div>
+                </div>
+                <form class="form-split-minimal" name="contact-split-minimal" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="contact-split-minimal">
+                    <p class="hidden"><label>Don't fill: <input name="bot-field" /></label></p>
+
+                    <input type="text" name="name" placeholder="Your name" class="input-minimal" required>
+                    <input type="email" name="email" placeholder="Your email" class="input-minimal" required>
+                    <textarea name="message" placeholder="What would you like to discuss?" class="textarea-minimal" rows="5" required></textarea>
+                    <button type="submit" class="btn-minimal">Send →</button>
+                </form>
+            </div>
         </div>
 
         <!-- Style Switcher -->
         <div class="contact-style-switcher">
             <div class="switcher-label">Contact Style:</div>
-            <button onclick="setContactStyle('minimal')" class="style-btn active" data-style="minimal">Minimal</button>
+            <button onclick="setContactStyle('minimal')" class="style-btn" data-style="minimal">Minimal</button>
             <button onclick="setContactStyle('split')" class="style-btn" data-style="split">Split</button>
+            <button onclick="setContactStyle('split-minimal')" class="style-btn active" data-style="split-minimal">Split + Minimal</button>
             <button onclick="setContactStyle('info')" class="style-btn" data-style="info">Info Only</button>
         </div>
     </main>
