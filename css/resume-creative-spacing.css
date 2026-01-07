@@ -1,0 +1,30 @@
+/* ================================
+   Resume Page: Creative Spacing with Elegant Fonts
+   ================================ */
+
+/* Apply Creative's tighter letter spacing */
+h1, h2, h3, h4, h5, h6,
+.site-name,
+.page-title,
+.resume-section-title,
+.resume-role,
+.skill-cat-title {
+    letter-spacing: -0.02em !important;
+}
+
+.site-name {
+    letter-spacing: -0.01em !important;
+}
+
+/* Tighter overall spacing like Creative */
+.resume-section {
+    padding: 2.25rem 1.5rem;
+}
+
+.resume-item {
+    margin-bottom: 1.75rem;
+}
+
+.resume-section-title {
+    margin-bottom: 1.5rem;
+}

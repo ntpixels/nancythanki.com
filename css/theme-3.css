@@ -19,7 +19,7 @@
     /* Typography */
     --font-primary: 'Space Grotesk', -apple-system, sans-serif;
     --heading-weight: 600;
-    --heading-spacing: -0.015em;
+    --heading-spacing: -0.02em;
 
     /* Effects */
     --shadow-hover: 0 4px 14px rgba(193, 102, 74, 0.15);

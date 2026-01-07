@@ -131,11 +131,13 @@ body {
     display: inline-block;
 }
 
-/* Style 1: Underline Links */
+/* Style 1: Underline Links with Arrow Hover */
 .hero-actions.style-underline .cta-link {
     color: var(--text-color);
     position: relative;
     padding-bottom: 0.25rem;
+    padding-right: 0;
+    transition: padding-right 0.3s ease;
 }
 
 .hero-actions.style-underline .cta-primary {
@@ -153,8 +155,28 @@ body {
     transition: width 0.3s ease;
 }
 
+.hero-actions.style-underline .cta-link::before {
+    content: '';
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, right 0.3s ease;
+}
+
+.hero-actions.style-underline .cta-link:hover {
+    padding-right: 1.5rem;
+}
+
 .hero-actions.style-underline .cta-link:hover::after {
-    width: 100%;
+    width: calc(100% - 1.5rem);
+}
+
+.hero-actions.style-underline .cta-link:hover::before {
+    content: '\2192';
+    opacity: 1;
+    right: 0;
 }
 
 /* Style 2: Pill Buttons */
@@ -778,6 +800,21 @@ body {
 .layout-space .section-title {
     text-align: center;
     margin-bottom: 3rem;
+}
+
+/* Override: Keep Grid layout for skills in Space layout */
+.layout-space .skills-section-override {
+    padding: 4rem 1.5rem;
+}
+
+.layout-space .skills-grid-override {
+    max-width: 800px;
+    gap: 2.5rem;
+}
+
+.layout-space .skills-section-override .section-title {
+    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 /* ================================
