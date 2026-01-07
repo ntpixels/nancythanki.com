@@ -229,24 +229,20 @@
    ================================ */
 
 .contact-split-minimal {
-    max-width: 900px;
-    margin: 6rem auto;
-}
-
-.contact-split-minimal .contact-heading {
-    margin-bottom: 2rem;
-}
-
-.contact-split-minimal-grid {
-    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: start;
+    max-width: 900px;
+    margin: 6rem auto;
 }
 
 .contact-split-minimal .split-info {
     display: flex;
     flex-direction: column;
+}
+
+.contact-split-minimal .contact-heading {
+    margin-top: -1rem;
+    margin-bottom: 2rem;
 }
 
 .form-split-minimal {
@@ -283,12 +279,9 @@
     }
 
     .contact-split-minimal {
-        margin: 4rem auto;
-    }
-
-    .contact-split-minimal-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+        margin: 4rem auto;
     }
 
     .contact-heading {
