@@ -229,20 +229,27 @@
    ================================ */
 
 .contact-split-minimal {
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
     max-width: 900px;
     margin: 6rem auto;
+}
+
+.contact-heading-main {
+    font-size: 3rem;
+    font-weight: var(--heading-weight);
+    letter-spacing: var(--heading-spacing);
+    margin-bottom: 2.5rem;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
 }
 
 .contact-split-minimal .split-info {
     display: flex;
     flex-direction: column;
-}
-
-.contact-split-minimal .contact-heading {
-    margin-top: -1rem;
-    margin-bottom: 2rem;
 }
 
 .form-split-minimal {
@@ -279,12 +286,16 @@
     }
 
     .contact-split-minimal {
-        grid-template-columns: 1fr;
-        gap: 3rem;
         margin: 4rem auto;
     }
 
-    .contact-heading {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .contact-heading,
+    .contact-heading-main {
         font-size: 2.5rem;
     }
 
