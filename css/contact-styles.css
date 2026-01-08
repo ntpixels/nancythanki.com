@@ -256,11 +256,16 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    margin-top: -0.65rem;
 }
 
+/* Align "Your name" text with "Interested in..." text */
+.form-split-minimal .input-minimal:first-of-type {
+    margin-top: -0.5rem;
+}
+
+/* Align textarea with bottom of LinkedIn section */
 .form-split-minimal .textarea-minimal {
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
 }
 
 /* ================================
