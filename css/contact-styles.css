@@ -260,12 +260,12 @@
 
 /* Align "Your name" text with "Interested in..." text */
 .form-split-minimal .input-minimal:first-of-type {
-    margin-top: -0.5rem;
+    margin-top: 0.15rem;
 }
 
 /* Align textarea with bottom of LinkedIn section */
 .form-split-minimal .textarea-minimal {
-    margin-top: 0.6rem;
+    margin-top: 0.85rem;
 }
 
 /* ================================
