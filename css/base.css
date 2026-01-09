@@ -236,7 +236,6 @@ body:has(.gradient-diagonal) {
 body:has(.gradient-diagonal) .site-header,
 body:has(.resume-page) .site-header,
 body:has(.contact-page) .site-header {
-    position: relative;
     background-color: rgba(252, 252, 251, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -246,7 +245,6 @@ body:has(.contact-page) .site-header {
 body:has(.gradient-diagonal) .site-footer,
 body:has(.resume-page) .site-footer,
 body:has(.contact-page) .site-footer {
-    position: relative;
     background-color: rgba(252, 252, 251, 0.75);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
