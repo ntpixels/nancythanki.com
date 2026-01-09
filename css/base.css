@@ -82,14 +82,16 @@ body {
    ================================ */
 
 .hero {
-    padding: 4.5rem 1.5rem 4rem;
-    max-width: 800px;
-    margin: 0 auto;
-    border-bottom: 1px solid var(--border-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
 }
 
 .hero-content {
     max-width: 650px;
+    text-align: center;
 }
 
 .hero-label {
@@ -121,6 +123,7 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* Default CTA styles (hidden base) */
@@ -726,12 +729,17 @@ ul.skill-list li::before {
 
 /* Layout: Break the Grid (Asymmetric) */
 .layout-grid .hero {
-    padding: 6rem 1.5rem 5rem;
+    /* min-height already set on base .hero */
 }
 
 .layout-grid .hero-content {
     max-width: 700px;
     margin-left: 5%;
+    text-align: left;
+}
+
+.layout-grid .hero-actions {
+    justify-content: flex-start;
 }
 
 .layout-grid .hero-title {
@@ -759,7 +767,7 @@ ul.skill-list li::before {
 
 .layout-warmth .hero {
     background-color: var(--bg-alt);
-    padding: 6rem 1.5rem 5rem;
+    /* min-height already set on base .hero */
 }
 
 .layout-warmth .hero-title {
@@ -780,13 +788,12 @@ ul.skill-list li::before {
 
 /* Layout: Maximum Space (Ultra minimal) */
 .layout-space .hero {
-    padding: 10rem 1.5rem 8rem;
+    /* min-height already set on base .hero */
 }
 
 .layout-space .hero-content {
     max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
+    /* text-align already set on base .hero-content */
 }
 
 .layout-space .hero-label {
@@ -805,7 +812,7 @@ ul.skill-list li::before {
 }
 
 .layout-space .hero-actions {
-    justify-content: center;
+    /* justify-content: center already set on base .hero-actions */
 }
 
 .layout-space .section {
@@ -844,7 +851,8 @@ ul.skill-list li::before {
 
 @media (max-width: 768px) {
     .hero {
-        padding: 3rem 1.25rem 2.5rem;
+        padding: 1.25rem;
+        /* min-height: 100vh still applies */
     }
 
     .hero-title {
