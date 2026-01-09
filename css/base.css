@@ -5,8 +5,8 @@
 
 /* Blur effect for specific words */
 .blur-word {
-    filter: blur(0.8px);
-    opacity: 0.92;
+    filter: blur(2px);
+    opacity: 0.85;
 }
 
 /* Gradient Options */
@@ -241,7 +241,7 @@ body:has(.gradient-diagonal) {
 body:has(.gradient-diagonal) .site-header,
 body:has(.resume-page) .site-header,
 body:has(.contact-page) .site-header {
-    background-color: rgba(252, 252, 251, 0.85);
+    background-color: rgba(252, 252, 251, 0.5);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     border-bottom-color: rgba(0, 0, 0, 0.06);
@@ -250,7 +250,7 @@ body:has(.contact-page) .site-header {
 body:has(.gradient-diagonal) .site-footer,
 body:has(.resume-page) .site-footer,
 body:has(.contact-page) .site-footer {
-    background-color: rgba(252, 252, 251, 0.85);
+    background-color: rgba(252, 252, 251, 0.5);
     backdrop-filter: blur(10px) saturate(180%);
     -webkit-backdrop-filter: blur(10px) saturate(180%);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
