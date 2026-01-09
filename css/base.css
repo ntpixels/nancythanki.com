@@ -591,6 +591,7 @@ body {
     display: block;
     font-size: 0.85rem;
     color: var(--text-tertiary);
+    font-family: var(--font-primary);
 }
 
 .resume-company-desc,
