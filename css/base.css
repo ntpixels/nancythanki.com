@@ -178,34 +178,26 @@ body:has(.gradient-diagonal) {
 }
 
 /* Option 7b: Sunset Watercolor - Tapered Middle (Fluid) */
-/* Apply gradient to body with fade in middle section */
+/* Same as Diagonal but middle section fades to blank watercolor paper */
 body:has(.gradient-diagonal-tapered) {
     background:
-        /* Top header area - warm coral bloom */
-        radial-gradient(ellipse 45% 20% at 15% 5%, rgba(255, 158, 125, 0.42) 0%, rgba(255, 158, 125, 0.2) 21%, transparent 52%),
-        /* Top right teal accent */
-        radial-gradient(circle at 85% 8%, rgba(30, 107, 95, 0.28) 0%, rgba(30, 107, 95, 0.1) 20%, transparent 48%),
-        /* Left side warm undertone - top area */
-        radial-gradient(ellipse 40% 18% at 8% 15%, rgba(242, 200, 180, 0.35) 0%, transparent 50%),
+        /* Top header area - warm coral bloom (same as diagonal) */
+        radial-gradient(ellipse 45% 25% at 15% 3%, rgba(255, 158, 125, 0.42) 0%, rgba(255, 158, 125, 0.2) 21%, transparent 52%),
+        /* Top right teal accent (same as diagonal) */
+        radial-gradient(circle at 85% 5%, rgba(30, 107, 95, 0.28) 0%, rgba(30, 107, 95, 0.1) 20%, transparent 48%),
+        /* Left side warm undertone (same as diagonal) */
+        radial-gradient(ellipse 40% 20% at 8% 18%, rgba(242, 200, 180, 0.35) 0%, transparent 50%),
 
-        /* Middle section - faded (My Approach area ~30-50%) */
-        radial-gradient(circle at 60% 38%, rgba(255, 172, 142, 0.15) 0%, rgba(255, 172, 142, 0.05) 22%, transparent 45%),
-        radial-gradient(ellipse 50% 15% at 18% 40%, rgba(30, 107, 95, 0.12) 0%, rgba(30, 107, 95, 0.03) 21%, transparent 42%),
+        /* Middle section - BLANK (My Approach area ~30-55%) - no gradients here */
 
-        /* Core Capabilities section - colors pick back up (~55-75%) */
-        radial-gradient(circle at 75% 62%, rgba(255, 165, 138, 0.40) 0%, rgba(255, 165, 138, 0.20) 20%, transparent 51%),
-        radial-gradient(ellipse 48% 22% at 20% 68%, rgba(30, 107, 95, 0.32) 0%, rgba(30, 107, 95, 0.14) 22%, transparent 50%),
-        radial-gradient(ellipse 42% 20% at 82% 65%, rgba(242, 210, 190, 0.32) 0%, transparent 48%),
-        radial-gradient(circle at 45% 60%, rgba(159, 186, 181, 0.25) 0%, transparent 46%),
+        /* Bottom section blooms start around 60% (same as diagonal) */
+        radial-gradient(ellipse 48% 25% at 12% 78%, rgba(255, 165, 138, 0.4) 0%, rgba(255, 165, 138, 0.2) 20%, transparent 51%),
+        radial-gradient(circle at 78% 75%, rgba(30, 107, 95, 0.32) 0%, rgba(30, 107, 95, 0.14) 22%, transparent 50%),
+        radial-gradient(ellipse 45% 22% at 48% 92%, rgba(198, 164, 154, 0.3) 0%, transparent 49%),
 
-        /* Bottom section blooms */
-        radial-gradient(ellipse 48% 18% at 12% 85%, rgba(255, 165, 138, 0.38) 0%, rgba(255, 165, 138, 0.18) 20%, transparent 50%),
-        radial-gradient(circle at 78% 88%, rgba(30, 107, 95, 0.30) 0%, rgba(30, 107, 95, 0.12) 22%, transparent 48%),
-        radial-gradient(ellipse 45% 16% at 48% 95%, rgba(198, 164, 154, 0.28) 0%, transparent 47%),
-
-        /* Footer area blend */
-        radial-gradient(ellipse 55% 12% at 25% 98%, rgba(255, 158, 125, 0.25) 0%, transparent 45%),
-        radial-gradient(circle at 75% 99%, rgba(30, 107, 95, 0.22) 0%, transparent 42%),
+        /* Footer area blend (same as diagonal) */
+        radial-gradient(ellipse 55% 18% at 25% 97%, rgba(255, 158, 125, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 75% 98%, rgba(30, 107, 95, 0.22) 0%, transparent 42%),
 
         /* Base color */
         linear-gradient(to bottom, #fefdfb 0%, #fcfaf8 50%, #f9f7f5 100%);
@@ -219,42 +211,57 @@ body:has(.gradient-diagonal-tapered) {
     border-bottom: none;
 }
 
-/* Option 7c: Paint Splatters - Bold Irregular Blooms */
+/* Option 7c: Paint Splatters - Sharp-Edged Splatters Along Edges */
 body:has(.gradient-splatter) {
     background:
-        /* Top left - large coral splatter with smaller accents */
-        radial-gradient(ellipse 35% 28% at 12% 12%, rgba(255, 145, 115, 0.52) 0%, rgba(255, 145, 115, 0.28) 15%, transparent 45%),
-        radial-gradient(circle at 8% 18%, rgba(255, 158, 125, 0.38) 0%, rgba(255, 158, 125, 0.12) 18%, transparent 40%),
-        radial-gradient(ellipse 18% 22% at 22% 8%, rgba(242, 180, 155, 0.44) 0%, transparent 42%),
+        /* Top left corner - coral splatter cluster */
+        radial-gradient(circle at 8% 8%, rgba(255, 145, 115, 0.65) 0%, rgba(255, 145, 115, 0.62) 6%, transparent 6.5%),
+        radial-gradient(ellipse 3% 4% at 12% 6%, rgba(255, 158, 125, 0.7) 0%, rgba(255, 158, 125, 0.7) 70%, transparent 70.5%),
+        radial-gradient(circle at 5% 12%, rgba(242, 180, 155, 0.6) 0%, rgba(242, 180, 155, 0.6) 3.5%, transparent 4%),
+        radial-gradient(ellipse 1.5% 6% at 10% 14%, rgba(255, 165, 138, 0.55) 0%, rgba(255, 165, 138, 0.55) 85%, transparent 85.5%),
+        radial-gradient(circle at 4% 18%, rgba(242, 200, 180, 0.5) 0%, rgba(242, 200, 180, 0.5) 2%, transparent 2.5%),
 
-        /* Top right - teal splatter cluster */
-        radial-gradient(circle at 88% 10%, rgba(30, 107, 95, 0.48) 0%, rgba(30, 107, 95, 0.22) 16%, transparent 42%),
-        radial-gradient(ellipse 25% 20% at 82% 15%, rgba(30, 107, 95, 0.36) 0%, rgba(30, 107, 95, 0.10) 20%, transparent 46%),
-        radial-gradient(circle at 92% 18%, rgba(159, 186, 181, 0.32) 0%, transparent 38%),
+        /* Top right corner - teal splatter cluster */
+        radial-gradient(circle at 92% 10%, rgba(30, 107, 95, 0.68) 0%, rgba(30, 107, 95, 0.65) 7%, transparent 7.5%),
+        radial-gradient(ellipse 2.5% 4% at 95% 7%, rgba(30, 107, 95, 0.62) 0%, rgba(30, 107, 95, 0.62) 75%, transparent 75.5%),
+        radial-gradient(circle at 89% 14%, rgba(159, 186, 181, 0.58) 0%, rgba(159, 186, 181, 0.58) 3%, transparent 3.5%),
+        radial-gradient(ellipse 2% 5% at 93% 16%, rgba(224, 242, 241, 0.54) 0%, rgba(224, 242, 241, 0.54) 80%, transparent 80.5%),
 
-        /* Middle left - warm splatter */
-        radial-gradient(ellipse 32% 25% at 15% 45%, rgba(242, 200, 180, 0.50) 0%, rgba(242, 200, 180, 0.24) 18%, transparent 48%),
-        radial-gradient(circle at 10% 52%, rgba(255, 175, 148, 0.34) 0%, transparent 36%),
+        /* Left edge middle - warm splatters */
+        radial-gradient(ellipse 4% 3% at 6% 45%, rgba(242, 200, 180, 0.64) 0%, rgba(242, 200, 180, 0.64) 65%, transparent 65.5%),
+        radial-gradient(circle at 3% 50%, rgba(255, 175, 148, 0.58) 0%, rgba(255, 175, 148, 0.58) 2.5%, transparent 3%),
+        radial-gradient(ellipse 1.5% 5% at 7% 55%, rgba(242, 185, 162, 0.52) 0%, rgba(242, 185, 162, 0.52) 85%, transparent 85.5%),
 
-        /* Middle right - mixed blooms */
-        radial-gradient(circle at 82% 48%, rgba(224, 242, 241, 0.42) 0%, rgba(224, 242, 241, 0.16) 19%, transparent 46%),
-        radial-gradient(ellipse 28% 22% at 75% 52%, rgba(159, 186, 181, 0.38) 0%, transparent 44%),
+        /* Right edge middle - teal splatters */
+        radial-gradient(circle at 95% 48%, rgba(224, 242, 241, 0.6) 0%, rgba(224, 242, 241, 0.6) 4%, transparent 4.5%),
+        radial-gradient(ellipse 2% 6% at 97% 52%, rgba(159, 186, 181, 0.55) 0%, rgba(159, 186, 181, 0.55) 80%, transparent 80.5%),
+        radial-gradient(circle at 94% 58%, rgba(30, 107, 95, 0.52) 0%, rgba(30, 107, 95, 0.52) 2.5%, transparent 3%),
 
-        /* Center accent splatters */
-        radial-gradient(circle at 48% 35%, rgba(255, 165, 138, 0.28) 0%, transparent 32%),
-        radial-gradient(ellipse 22% 18% at 55% 60%, rgba(30, 107, 95, 0.30) 0%, transparent 38%),
+        /* Bottom left corner - coral splatters */
+        radial-gradient(circle at 9% 88%, rgba(255, 158, 125, 0.66) 0%, rgba(255, 158, 125, 0.63) 8%, transparent 8.5%),
+        radial-gradient(ellipse 3% 2.5% at 12% 91%, rgba(242, 185, 162, 0.62) 0%, rgba(242, 185, 162, 0.62) 70%, transparent 70.5%),
+        radial-gradient(circle at 5% 85%, rgba(255, 192, 168, 0.58) 0%, rgba(255, 192, 168, 0.58) 3.5%, transparent 4%),
+        radial-gradient(ellipse 2% 4% at 7% 93%, rgba(242, 200, 180, 0.54) 0%, rgba(242, 200, 180, 0.54) 75%, transparent 75.5%),
 
-        /* Bottom left - large warm bloom */
-        radial-gradient(ellipse 38% 30% at 18% 82%, rgba(255, 158, 125, 0.48) 0%, rgba(255, 158, 125, 0.22) 17%, transparent 46%),
-        radial-gradient(circle at 12% 88%, rgba(242, 185, 162, 0.40) 0%, transparent 40%),
-        radial-gradient(ellipse 20% 16% at 25% 90%, rgba(255, 192, 168, 0.32) 0%, transparent 36%),
+        /* Bottom right corner - teal splatters */
+        radial-gradient(circle at 90% 90%, rgba(30, 107, 95, 0.64) 0%, rgba(30, 107, 95, 0.61) 6.5%, transparent 7%),
+        radial-gradient(ellipse 2.5% 3% at 94% 88%, rgba(224, 242, 241, 0.6) 0%, rgba(224, 242, 241, 0.6) 72%, transparent 72.5%),
+        radial-gradient(circle at 88% 94%, rgba(159, 186, 181, 0.55) 0%, rgba(159, 186, 181, 0.55) 3%, transparent 3.5%),
+        radial-gradient(ellipse 1.8% 4.5% at 92% 95%, rgba(30, 107, 95, 0.5) 0%, rgba(30, 107, 95, 0.5) 80%, transparent 80.5%),
 
-        /* Bottom right - teal cluster */
-        radial-gradient(circle at 85% 85%, rgba(30, 107, 95, 0.44) 0%, rgba(30, 107, 95, 0.20) 18%, transparent 44%),
-        radial-gradient(ellipse 26% 22% at 78% 90%, rgba(224, 242, 241, 0.38) 0%, transparent 42%),
-
-        /* Bottom center - mixed accent */
-        radial-gradient(circle at 52% 92%, rgba(198, 164, 154, 0.36) 0%, transparent 38%),
+        /* Diagonal base gradient (same as diagonal option) */
+        radial-gradient(ellipse 45% 25% at 15% 3%, rgba(255, 158, 125, 0.42) 0%, rgba(255, 158, 125, 0.2) 21%, transparent 52%),
+        radial-gradient(circle at 85% 5%, rgba(30, 107, 95, 0.28) 0%, rgba(30, 107, 95, 0.1) 20%, transparent 48%),
+        radial-gradient(ellipse 40% 20% at 8% 18%, rgba(242, 200, 180, 0.35) 0%, transparent 50%),
+        radial-gradient(circle at 60% 42%, rgba(255, 172, 142, 0.45) 0%, rgba(255, 172, 142, 0.22) 22%, transparent 53%),
+        radial-gradient(ellipse 50% 28% at 18% 52%, rgba(30, 107, 95, 0.3) 0%, rgba(30, 107, 95, 0.12) 21%, transparent 50%),
+        radial-gradient(ellipse 42% 24% at 82% 45%, rgba(242, 210, 190, 0.32) 0%, transparent 48%),
+        radial-gradient(circle at 35% 38%, rgba(159, 186, 181, 0.2) 0%, transparent 46%),
+        radial-gradient(ellipse 48% 25% at 12% 78%, rgba(255, 165, 138, 0.4) 0%, rgba(255, 165, 138, 0.2) 20%, transparent 51%),
+        radial-gradient(circle at 78% 75%, rgba(30, 107, 95, 0.32) 0%, rgba(30, 107, 95, 0.14) 22%, transparent 50%),
+        radial-gradient(ellipse 45% 22% at 48% 92%, rgba(198, 164, 154, 0.3) 0%, transparent 49%),
+        radial-gradient(ellipse 55% 18% at 25% 97%, rgba(255, 158, 125, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 75% 98%, rgba(30, 107, 95, 0.22) 0%, transparent 42%),
 
         /* Base color */
         linear-gradient(to bottom, #fefdfb 0%, #fcfaf8 50%, #f9f7f5 100%);
