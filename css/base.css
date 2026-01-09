@@ -3,11 +3,6 @@
    Version: 2026-01-07-v3
    ================================ */
 
-/* Blur effect for specific words */
-.blur-word {
-    filter: blur(2px);
-    opacity: 0.85;
-}
 
 /* Gradient Options */
 /* Option 1: Paper Texture (Default) - Clean Minimal */
@@ -241,19 +236,108 @@ body:has(.gradient-diagonal) {
 body:has(.gradient-diagonal) .site-header,
 body:has(.resume-page) .site-header,
 body:has(.contact-page) .site-header {
-    background-color: rgba(252, 252, 251, 0.5);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    position: relative;
+    background-color: rgba(252, 252, 251, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-bottom-color: rgba(0, 0, 0, 0.06);
 }
 
 body:has(.gradient-diagonal) .site-footer,
 body:has(.resume-page) .site-footer,
 body:has(.contact-page) .site-footer {
-    background-color: rgba(252, 252, 251, 0.5);
-    backdrop-filter: blur(10px) saturate(180%);
-    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    position: relative;
+    background-color: rgba(252, 252, 251, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Add gradient overlays to header */
+body:has(.gradient-diagonal) .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 60% 80% at 15% 50%, rgba(255, 158, 125, 0.35) 0%, rgba(255, 158, 125, 0.15) 25%, transparent 60%),
+        radial-gradient(circle at 85% 50%, rgba(30, 107, 95, 0.25) 0%, rgba(30, 107, 95, 0.1) 25%, transparent 55%),
+        radial-gradient(ellipse 50% 70% at 50% 50%, rgba(242, 200, 180, 0.2) 0%, transparent 50%);
+}
+
+body:has(.resume-page) .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 55% 80% at 20% 50%, rgba(30, 107, 95, 0.15) 0%, rgba(30, 107, 95, 0.06) 30%, transparent 60%),
+        radial-gradient(circle at 75% 50%, rgba(242, 200, 180, 0.12) 0%, rgba(242, 200, 180, 0.04) 28%, transparent 55%);
+}
+
+body:has(.contact-page) .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 60% 75% at 18% 50%, rgba(159, 186, 181, 0.32) 0%, rgba(159, 186, 181, 0.14) 25%, transparent 55%),
+        radial-gradient(circle at 78% 50%, rgba(224, 242, 241, 0.28) 0%, rgba(224, 242, 241, 0.12) 24%, transparent 52%);
+}
+
+/* Add gradient overlays to footer */
+body:has(.gradient-diagonal) .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 55% 75% at 25% 50%, rgba(255, 158, 125, 0.3) 0%, rgba(255, 158, 125, 0.12) 24%, transparent 58%),
+        radial-gradient(circle at 75% 50%, rgba(30, 107, 95, 0.22) 0%, rgba(30, 107, 95, 0.08) 22%, transparent 52%);
+}
+
+body:has(.resume-page) .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 50% 80% at 30% 50%, rgba(30, 107, 95, 0.14) 0%, rgba(30, 107, 95, 0.05) 26%, transparent 56%),
+        radial-gradient(circle at 70% 50%, rgba(255, 185, 160, 0.12) 0%, rgba(255, 185, 160, 0.04) 24%, transparent 52%);
+}
+
+body:has(.contact-page) .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 55% 78% at 15% 50%, rgba(242, 185, 162, 0.34) 0%, rgba(242, 185, 162, 0.14) 23%, transparent 54%),
+        radial-gradient(circle at 70% 50%, rgba(255, 192, 168, 0.3) 0%, rgba(255, 192, 168, 0.12) 22%, transparent 52%);
 }
 
 /* Resume Page - Watercolor Paper Effect */
@@ -350,6 +434,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .site-name {
@@ -745,6 +831,8 @@ body {
 .footer-content {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .footer-nav {
