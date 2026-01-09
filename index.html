@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <main class="layout-space" id="mainLayout">
+    <main class="layout-space gradient-subtle" id="mainLayout">
         <!-- Hero Section -->
         <section class="hero" id="heroSection">
             <div class="hero-content">
@@ -114,6 +114,16 @@
             <button onclick="switchTheme(2)" class="control-btn active" data-theme="2">Elegant</button>
             <button onclick="switchTheme(3)" class="control-btn" data-theme="3">Creative</button>
         </div>
+        <div class="control-group">
+            <div class="control-label">Gradient:</div>
+            <button onclick="setGradient('subtle')" class="control-btn active" data-gradient="subtle">Subtle</button>
+            <button onclick="setGradient('teal')" class="control-btn" data-gradient="teal">Teal</button>
+            <button onclick="setGradient('mist')" class="control-btn" data-gradient="mist">Mist</button>
+            <button onclick="setGradient('warm')" class="control-btn" data-gradient="warm">Warm</button>
+            <button onclick="setGradient('layered')" class="control-btn" data-gradient="layered">Layered</button>
+            <button onclick="setGradient('radial')" class="control-btn" data-gradient="radial">Radial</button>
+            <button onclick="setGradient('corners')" class="control-btn" data-gradient="corners">Corners</button>
+        </div>
     </div>
 
     <script>
@@ -150,6 +160,22 @@
             document.querySelectorAll('[data-style]').forEach(btn => {
                 btn.classList.remove('active');
                 if (btn.dataset.style === style) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+
+        function setGradient(gradient) {
+            const main = document.getElementById('mainLayout');
+            // Remove all gradient classes
+            main.classList.remove('gradient-subtle', 'gradient-teal', 'gradient-mist', 'gradient-warm', 'gradient-layered', 'gradient-radial', 'gradient-corners');
+            // Add selected gradient class
+            main.classList.add('gradient-' + gradient);
+
+            // Update active button
+            document.querySelectorAll('[data-gradient]').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.gradient === gradient) {
                     btn.classList.add('active');
                 }
             });
