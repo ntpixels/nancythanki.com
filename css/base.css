@@ -177,6 +177,97 @@ body:has(.gradient-diagonal) {
     border-bottom: none;
 }
 
+/* Option 7b: Sunset Watercolor - Tapered Middle (Fluid) */
+/* Apply gradient to body with fade in middle section */
+body:has(.gradient-diagonal-tapered) {
+    background:
+        /* Top header area - warm coral bloom */
+        radial-gradient(ellipse 45% 20% at 15% 5%, rgba(255, 158, 125, 0.42) 0%, rgba(255, 158, 125, 0.2) 21%, transparent 52%),
+        /* Top right teal accent */
+        radial-gradient(circle at 85% 8%, rgba(30, 107, 95, 0.28) 0%, rgba(30, 107, 95, 0.1) 20%, transparent 48%),
+        /* Left side warm undertone - top area */
+        radial-gradient(ellipse 40% 18% at 8% 15%, rgba(242, 200, 180, 0.35) 0%, transparent 50%),
+
+        /* Middle section - faded (My Approach area ~30-50%) */
+        radial-gradient(circle at 60% 38%, rgba(255, 172, 142, 0.15) 0%, rgba(255, 172, 142, 0.05) 22%, transparent 45%),
+        radial-gradient(ellipse 50% 15% at 18% 40%, rgba(30, 107, 95, 0.12) 0%, rgba(30, 107, 95, 0.03) 21%, transparent 42%),
+
+        /* Core Capabilities section - colors pick back up (~55-75%) */
+        radial-gradient(circle at 75% 62%, rgba(255, 165, 138, 0.40) 0%, rgba(255, 165, 138, 0.20) 20%, transparent 51%),
+        radial-gradient(ellipse 48% 22% at 20% 68%, rgba(30, 107, 95, 0.32) 0%, rgba(30, 107, 95, 0.14) 22%, transparent 50%),
+        radial-gradient(ellipse 42% 20% at 82% 65%, rgba(242, 210, 190, 0.32) 0%, transparent 48%),
+        radial-gradient(circle at 45% 60%, rgba(159, 186, 181, 0.25) 0%, transparent 46%),
+
+        /* Bottom section blooms */
+        radial-gradient(ellipse 48% 18% at 12% 85%, rgba(255, 165, 138, 0.38) 0%, rgba(255, 165, 138, 0.18) 20%, transparent 50%),
+        radial-gradient(circle at 78% 88%, rgba(30, 107, 95, 0.30) 0%, rgba(30, 107, 95, 0.12) 22%, transparent 48%),
+        radial-gradient(ellipse 45% 16% at 48% 95%, rgba(198, 164, 154, 0.28) 0%, transparent 47%),
+
+        /* Footer area blend */
+        radial-gradient(ellipse 55% 12% at 25% 98%, rgba(255, 158, 125, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 75% 99%, rgba(30, 107, 95, 0.22) 0%, transparent 42%),
+
+        /* Base color */
+        linear-gradient(to bottom, #fefdfb 0%, #fcfaf8 50%, #f9f7f5 100%);
+}
+
+/* Remove section backgrounds and borders for diagonal-tapered */
+.gradient-diagonal-tapered,
+.gradient-diagonal-tapered .hero,
+.gradient-diagonal-tapered .section {
+    background: transparent;
+    border-bottom: none;
+}
+
+/* Option 7c: Paint Splatters - Bold Irregular Blooms */
+body:has(.gradient-splatter) {
+    background:
+        /* Top left - large coral splatter with smaller accents */
+        radial-gradient(ellipse 35% 28% at 12% 12%, rgba(255, 145, 115, 0.52) 0%, rgba(255, 145, 115, 0.28) 15%, transparent 45%),
+        radial-gradient(circle at 8% 18%, rgba(255, 158, 125, 0.38) 0%, rgba(255, 158, 125, 0.12) 18%, transparent 40%),
+        radial-gradient(ellipse 18% 22% at 22% 8%, rgba(242, 180, 155, 0.44) 0%, transparent 42%),
+
+        /* Top right - teal splatter cluster */
+        radial-gradient(circle at 88% 10%, rgba(30, 107, 95, 0.48) 0%, rgba(30, 107, 95, 0.22) 16%, transparent 42%),
+        radial-gradient(ellipse 25% 20% at 82% 15%, rgba(30, 107, 95, 0.36) 0%, rgba(30, 107, 95, 0.10) 20%, transparent 46%),
+        radial-gradient(circle at 92% 18%, rgba(159, 186, 181, 0.32) 0%, transparent 38%),
+
+        /* Middle left - warm splatter */
+        radial-gradient(ellipse 32% 25% at 15% 45%, rgba(242, 200, 180, 0.50) 0%, rgba(242, 200, 180, 0.24) 18%, transparent 48%),
+        radial-gradient(circle at 10% 52%, rgba(255, 175, 148, 0.34) 0%, transparent 36%),
+
+        /* Middle right - mixed blooms */
+        radial-gradient(circle at 82% 48%, rgba(224, 242, 241, 0.42) 0%, rgba(224, 242, 241, 0.16) 19%, transparent 46%),
+        radial-gradient(ellipse 28% 22% at 75% 52%, rgba(159, 186, 181, 0.38) 0%, transparent 44%),
+
+        /* Center accent splatters */
+        radial-gradient(circle at 48% 35%, rgba(255, 165, 138, 0.28) 0%, transparent 32%),
+        radial-gradient(ellipse 22% 18% at 55% 60%, rgba(30, 107, 95, 0.30) 0%, transparent 38%),
+
+        /* Bottom left - large warm bloom */
+        radial-gradient(ellipse 38% 30% at 18% 82%, rgba(255, 158, 125, 0.48) 0%, rgba(255, 158, 125, 0.22) 17%, transparent 46%),
+        radial-gradient(circle at 12% 88%, rgba(242, 185, 162, 0.40) 0%, transparent 40%),
+        radial-gradient(ellipse 20% 16% at 25% 90%, rgba(255, 192, 168, 0.32) 0%, transparent 36%),
+
+        /* Bottom right - teal cluster */
+        radial-gradient(circle at 85% 85%, rgba(30, 107, 95, 0.44) 0%, rgba(30, 107, 95, 0.20) 18%, transparent 44%),
+        radial-gradient(ellipse 26% 22% at 78% 90%, rgba(224, 242, 241, 0.38) 0%, transparent 42%),
+
+        /* Bottom center - mixed accent */
+        radial-gradient(circle at 52% 92%, rgba(198, 164, 154, 0.36) 0%, transparent 38%),
+
+        /* Base color */
+        linear-gradient(to bottom, #fefdfb 0%, #fcfaf8 50%, #f9f7f5 100%);
+}
+
+/* Remove section backgrounds and borders for splatter */
+.gradient-splatter,
+.gradient-splatter .hero,
+.gradient-splatter .section {
+    background: transparent;
+    border-bottom: none;
+}
+
 /* Option 8: Oceanic Blend - Cool Dominance */
 .gradient-radial-blooms .hero {
     background:
@@ -234,6 +325,8 @@ body:has(.gradient-diagonal) {
 
 /* Make header/footer show gradient but prevent text show-through */
 body:has(.gradient-diagonal) .site-header,
+body:has(.gradient-diagonal-tapered) .site-header,
+body:has(.gradient-splatter) .site-header,
 body:has(.resume-page) .site-header,
 body:has(.contact-page) .site-header {
     background-color: rgba(252, 252, 251, 0.75);
@@ -243,6 +336,8 @@ body:has(.contact-page) .site-header {
 }
 
 body:has(.gradient-diagonal) .site-footer,
+body:has(.gradient-diagonal-tapered) .site-footer,
+body:has(.gradient-splatter) .site-footer,
 body:has(.resume-page) .site-footer,
 body:has(.contact-page) .site-footer {
     background-color: rgba(252, 252, 251, 0.75);
@@ -252,7 +347,8 @@ body:has(.contact-page) .site-footer {
 }
 
 /* Add gradient overlays to header */
-body:has(.gradient-diagonal) .site-header::before {
+body:has(.gradient-diagonal) .site-header::before,
+body:has(.gradient-diagonal-tapered) .site-header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -265,6 +361,22 @@ body:has(.gradient-diagonal) .site-header::before {
         radial-gradient(ellipse 60% 80% at 15% 50%, rgba(255, 158, 125, 0.35) 0%, rgba(255, 158, 125, 0.15) 25%, transparent 60%),
         radial-gradient(circle at 85% 50%, rgba(30, 107, 95, 0.25) 0%, rgba(30, 107, 95, 0.1) 25%, transparent 55%),
         radial-gradient(ellipse 50% 70% at 50% 50%, rgba(242, 200, 180, 0.2) 0%, transparent 50%);
+}
+
+body:has(.gradient-splatter) .site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 45% 75% at 18% 50%, rgba(255, 145, 115, 0.48) 0%, rgba(255, 145, 115, 0.22) 20%, transparent 55%),
+        radial-gradient(circle at 12% 60%, rgba(242, 180, 155, 0.38) 0%, transparent 45%),
+        radial-gradient(circle at 82% 50%, rgba(30, 107, 95, 0.42) 0%, rgba(30, 107, 95, 0.18) 18%, transparent 50%),
+        radial-gradient(ellipse 35% 65% at 70% 45%, rgba(224, 242, 241, 0.32) 0%, transparent 48%);
 }
 
 body:has(.resume-page) .site-header::before {
@@ -296,7 +408,8 @@ body:has(.contact-page) .site-header::before {
 }
 
 /* Add gradient overlays to footer */
-body:has(.gradient-diagonal) .site-footer::before {
+body:has(.gradient-diagonal) .site-footer::before,
+body:has(.gradient-diagonal-tapered) .site-footer::before {
     content: '';
     position: absolute;
     top: 0;
@@ -308,6 +421,22 @@ body:has(.gradient-diagonal) .site-footer::before {
     background:
         radial-gradient(ellipse 55% 75% at 25% 50%, rgba(255, 158, 125, 0.3) 0%, rgba(255, 158, 125, 0.12) 24%, transparent 58%),
         radial-gradient(circle at 75% 50%, rgba(30, 107, 95, 0.22) 0%, rgba(30, 107, 95, 0.08) 22%, transparent 52%);
+}
+
+body:has(.gradient-splatter) .site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse 50% 70% at 22% 50%, rgba(255, 158, 125, 0.44) 0%, rgba(255, 158, 125, 0.20) 19%, transparent 54%),
+        radial-gradient(circle at 15% 58%, rgba(242, 185, 162, 0.36) 0%, transparent 42%),
+        radial-gradient(circle at 78% 48%, rgba(30, 107, 95, 0.40) 0%, rgba(30, 107, 95, 0.16) 17%, transparent 48%),
+        radial-gradient(ellipse 38% 68% at 85% 55%, rgba(224, 242, 241, 0.34) 0%, transparent 46%);
 }
 
 body:has(.resume-page) .site-footer::before {

@@ -123,6 +123,8 @@
             <button onclick="setGradient('teal-mist')" class="control-btn" data-gradient="teal-mist">Teal Mist</button>
             <button onclick="setGradient('warm-cool')" class="control-btn" data-gradient="warm-cool">Warm/Cool</button>
             <button onclick="setGradient('diagonal')" class="control-btn" data-gradient="diagonal">Diagonal</button>
+            <button onclick="setGradient('diagonal-tapered')" class="control-btn" data-gradient="diagonal-tapered">Diagonal Tapered</button>
+            <button onclick="setGradient('splatter')" class="control-btn" data-gradient="splatter">Paint Splatter</button>
             <button onclick="setGradient('radial-blooms')" class="control-btn" data-gradient="radial-blooms">Radial</button>
             <button onclick="setGradient('layered-depth')" class="control-btn" data-gradient="layered-depth">Layered</button>
         </div>
@@ -170,7 +172,7 @@
         function setGradient(gradient) {
             const main = document.getElementById('mainLayout');
             // Remove all gradient classes
-            main.classList.remove('gradient-paper', 'gradient-watercolor', 'gradient-teal-accent', 'gradient-directional', 'gradient-teal-mist', 'gradient-warm-cool', 'gradient-diagonal', 'gradient-radial-blooms', 'gradient-layered-depth');
+            main.classList.remove('gradient-paper', 'gradient-watercolor', 'gradient-teal-accent', 'gradient-directional', 'gradient-teal-mist', 'gradient-warm-cool', 'gradient-diagonal', 'gradient-diagonal-tapered', 'gradient-splatter', 'gradient-radial-blooms', 'gradient-layered-depth');
             // Add selected gradient class
             main.classList.add('gradient-' + gradient);
 
