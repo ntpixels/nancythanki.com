@@ -209,23 +209,5 @@
         </div>
     </footer>
 
-    <!-- Theme Switcher -->
-    <div class="theme-switcher">
-        <div class="switcher-label">Theme:</div>
-        <button onclick="switchTheme(2)" class="theme-btn active" data-theme="2">Elegant</button>
-        <button onclick="switchTheme(3)" class="theme-btn" data-theme="3">Creative</button>
-    </div>
-
-    <script>
-        function switchTheme(num) {
-            document.getElementById('theme-stylesheet').href = `css/theme-${num}.css`;
-            document.querySelectorAll('.theme-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.theme == num) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-    </script>
 </body>
 </html>

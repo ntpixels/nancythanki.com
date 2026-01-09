@@ -137,15 +137,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Style Switcher -->
-        <div class="contact-style-switcher">
-            <div class="switcher-label">Contact Style:</div>
-            <button onclick="setContactStyle('minimal')" class="style-btn" data-style="minimal">Minimal</button>
-            <button onclick="setContactStyle('split')" class="style-btn" data-style="split">Split</button>
-            <button onclick="setContactStyle('split-minimal')" class="style-btn active" data-style="split-minimal">Split + Minimal</button>
-            <button onclick="setContactStyle('info')" class="style-btn" data-style="info">Info Only</button>
-        </div>
     </main>
 
     <footer class="site-footer">
@@ -171,19 +162,5 @@
         </div>
     </footer>
 
-
-    <script>
-        function setContactStyle(style) {
-            const main = document.getElementById('contactMain');
-            main.className = 'contact-page contact-style-' + style;
-
-            document.querySelectorAll('[data-style]').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.style === style) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-    </script>
 </body>
 </html>

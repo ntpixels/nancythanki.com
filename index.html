@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <main class="layout-space gradient-paper" id="mainLayout">
+    <main class="layout-space gradient-diagonal-tapered" id="mainLayout">
         <!-- Hero Section -->
         <section class="hero" id="heroSection">
             <div class="hero-content">
@@ -96,95 +96,7 @@
         </div>
     </footer>
 
-    <!-- Design Controls -->
-    <div class="design-controls">
-        <div class="control-group">
-            <div class="control-label">Layout:</div>
-            <button onclick="setLayout('grid')" class="control-btn" data-layout="grid">Grid</button>
-            <button onclick="setLayout('warmth')" class="control-btn" data-layout="warmth">Warmth</button>
-            <button onclick="setLayout('space')" class="control-btn active" data-layout="space">Space</button>
-        </div>
-        <div class="control-group">
-            <div class="control-label">Button:</div>
-            <button onclick="setButtonStyle('underline')" class="control-btn active" data-style="underline">Underline</button>
-            <button onclick="setButtonStyle('arrow')" class="control-btn" data-style="arrow">Arrow</button>
-        </div>
-        <div class="control-group">
-            <div class="control-label">Theme:</div>
-            <button onclick="switchTheme(2)" class="control-btn active" data-theme="2">Elegant</button>
-            <button onclick="switchTheme(3)" class="control-btn" data-theme="3">Creative</button>
-        </div>
-        <div class="control-group">
-            <div class="control-label">Gradient:</div>
-            <button onclick="setGradient('paper')" class="control-btn active" data-gradient="paper">Paper</button>
-            <button onclick="setGradient('watercolor')" class="control-btn" data-gradient="watercolor">Watercolor</button>
-            <button onclick="setGradient('teal-accent')" class="control-btn" data-gradient="teal-accent">Teal Accent</button>
-            <button onclick="setGradient('directional')" class="control-btn" data-gradient="directional">Light</button>
-            <button onclick="setGradient('teal-mist')" class="control-btn" data-gradient="teal-mist">Teal Mist</button>
-            <button onclick="setGradient('warm-cool')" class="control-btn" data-gradient="warm-cool">Warm/Cool</button>
-            <button onclick="setGradient('diagonal')" class="control-btn" data-gradient="diagonal">Diagonal</button>
-            <button onclick="setGradient('diagonal-tapered')" class="control-btn" data-gradient="diagonal-tapered">Diagonal Tapered</button>
-            <button onclick="setGradient('splatter')" class="control-btn" data-gradient="splatter">Paint Splatter</button>
-            <button onclick="setGradient('radial-blooms')" class="control-btn" data-gradient="radial-blooms">Radial</button>
-            <button onclick="setGradient('layered-depth')" class="control-btn" data-gradient="layered-depth">Layered</button>
-        </div>
-    </div>
-
     <script>
-        function setLayout(layout) {
-            const main = document.getElementById('mainLayout');
-            main.className = 'layout-' + layout;
-
-            // Update active button
-            document.querySelectorAll('[data-layout]').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.layout === layout) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-
-        function switchTheme(num) {
-            document.getElementById('theme-stylesheet').href = `css/theme-${num}.css`;
-
-            // Update active button
-            document.querySelectorAll('[data-theme]').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.theme == num) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-
-        function setButtonStyle(style) {
-            const heroActions = document.getElementById('heroActions');
-            heroActions.className = 'hero-actions style-' + style;
-
-            // Update active button
-            document.querySelectorAll('[data-style]').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.style === style) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-
-        function setGradient(gradient) {
-            const main = document.getElementById('mainLayout');
-            // Remove all gradient classes
-            main.classList.remove('gradient-paper', 'gradient-watercolor', 'gradient-teal-accent', 'gradient-directional', 'gradient-teal-mist', 'gradient-warm-cool', 'gradient-diagonal', 'gradient-diagonal-tapered', 'gradient-splatter', 'gradient-radial-blooms', 'gradient-layered-depth');
-            // Add selected gradient class
-            main.classList.add('gradient-' + gradient);
-
-            // Update active button
-            document.querySelectorAll('[data-gradient]').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.gradient === gradient) {
-                    btn.classList.add('active');
-                }
-            });
-        }
-
         // Smooth scrolling with offset for sticky header
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
