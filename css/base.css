@@ -137,7 +137,7 @@ body {
 
 /* Style 1: Underline Links with Arrow Hover */
 .hero-actions.style-underline .cta-link {
-    color: var(--text-color);
+    color: var(--accent-color);
     position: relative;
     padding-bottom: 0.25rem;
 }
@@ -228,6 +228,9 @@ body {
    ================================ */
 
 .section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     padding: 3rem 1.5rem;
     border-bottom: 1px solid var(--border-color);
 }
@@ -590,8 +593,7 @@ body {
 .resume-date {
     display: block;
     font-size: 0.85rem;
-    color: var(--text-tertiary);
-    font-family: var(--font-primary);
+    color: var(--accent-color);
 }
 
 .resume-company-desc,
