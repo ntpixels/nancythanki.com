@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <main class="layout-space gradient-subtle" id="mainLayout">
+    <main class="layout-space gradient-paper" id="mainLayout">
         <!-- Hero Section -->
         <section class="hero" id="heroSection">
             <div class="hero-content">
@@ -41,10 +41,10 @@
                         I build the infrastructure that enables growth.
                     </p>
                     <p class="bio-text">
-                        I specialize in translating executive vision into prioritized initiatives and scalable operations while leading cross-functional teams through M&A, integrations, product development, and addressing churn.
+                        I transform organizational complexity and bold vision into strategic priorities, scalable systems, and operational clarity.
                     </p>
                     <p class="bio-text">
-                        My background in science, technology, and culture built the foundation for understanding ethical and social implications of technical systems - essential for strategic operations in an AI-driven world.
+                        I've led cross-functional teams through M&A integrations, product launches, and operational transformations, achieving outcomes like 90% churn reduction.
                     </p>
                 </div>
             </div>
@@ -116,13 +116,15 @@
         </div>
         <div class="control-group">
             <div class="control-label">Gradient:</div>
-            <button onclick="setGradient('subtle')" class="control-btn active" data-gradient="subtle">Subtle</button>
-            <button onclick="setGradient('teal')" class="control-btn" data-gradient="teal">Teal</button>
-            <button onclick="setGradient('mist')" class="control-btn" data-gradient="mist">Mist</button>
-            <button onclick="setGradient('warm')" class="control-btn" data-gradient="warm">Warm</button>
-            <button onclick="setGradient('layered')" class="control-btn" data-gradient="layered">Layered</button>
-            <button onclick="setGradient('radial')" class="control-btn" data-gradient="radial">Radial</button>
-            <button onclick="setGradient('corners')" class="control-btn" data-gradient="corners">Corners</button>
+            <button onclick="setGradient('paper')" class="control-btn active" data-gradient="paper">Paper</button>
+            <button onclick="setGradient('watercolor')" class="control-btn" data-gradient="watercolor">Watercolor</button>
+            <button onclick="setGradient('teal-accent')" class="control-btn" data-gradient="teal-accent">Teal Accent</button>
+            <button onclick="setGradient('directional')" class="control-btn" data-gradient="directional">Light</button>
+            <button onclick="setGradient('teal-mist')" class="control-btn" data-gradient="teal-mist">Teal Mist</button>
+            <button onclick="setGradient('warm-cool')" class="control-btn" data-gradient="warm-cool">Warm/Cool</button>
+            <button onclick="setGradient('diagonal')" class="control-btn" data-gradient="diagonal">Diagonal</button>
+            <button onclick="setGradient('radial-blooms')" class="control-btn" data-gradient="radial-blooms">Radial</button>
+            <button onclick="setGradient('layered-depth')" class="control-btn" data-gradient="layered-depth">Layered</button>
         </div>
     </div>
 
@@ -168,7 +170,7 @@
         function setGradient(gradient) {
             const main = document.getElementById('mainLayout');
             // Remove all gradient classes
-            main.classList.remove('gradient-subtle', 'gradient-teal', 'gradient-mist', 'gradient-warm', 'gradient-layered', 'gradient-radial', 'gradient-corners');
+            main.classList.remove('gradient-paper', 'gradient-watercolor', 'gradient-teal-accent', 'gradient-directional', 'gradient-teal-mist', 'gradient-warm-cool', 'gradient-diagonal', 'gradient-radial-blooms', 'gradient-layered-depth');
             // Add selected gradient class
             main.classList.add('gradient-' + gradient);
 
